@@ -8,11 +8,10 @@ class LanguageController extends Controller
 {
     public function switch($lang)
     {
-        if (in_array($lang, ['fr', 'ar'])) {
-            cookie()->queue(cookie()->forever('locale', $lang));
-            app()->setLocale($lang);
+        if (in_array($lang, ['en', 'ar'])) {
             session(['locale' => $lang]);
         }
+
         return redirect()->back();
     }
 }

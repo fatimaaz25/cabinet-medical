@@ -1,58 +1,357 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Cabinet Medical Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Introduction
 
-## About Laravel
+The Cabinet Medical Management System is a web-based application developed using the Laravel Framework. The main purpose of this project is to simplify the management of medical services, appointments, and user interactions within a medical cabinet.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The application provides a secure environment where users can register, log in, manage appointments, access available medical services, and update their personal information. The system also supports multilingual functionality, allowing users to switch between English and Arabic languages.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+This project was developed as an academic project to demonstrate the use of modern web technologies and database management techniques.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+# Project Objectives
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+The main objectives of this project are:
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Automate medical cabinet management tasks.
+- Improve appointment scheduling processes.
+- Facilitate communication between users and the medical cabinet.
+- Provide a secure authentication system.
+- Support multiple languages.
+- Apply Laravel best practices in web development.
+- Demonstrate CRUD operations using Laravel.
+- Implement database relationships using Eloquent ORM.
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+---
 
-## Agentic Development
+# System Features
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## User Authentication
+
+The authentication module allows users to:
+
+- Register a new account.
+- Log in securely.
+- Log out safely.
+- Reset forgotten passwords.
+- Manage their personal profile.
+
+### Benefits
+
+- Improved security.
+- Personalized user experience.
+- Protected application resources.
+
+---
+
+## Appointment Management
+
+Users can perform the following operations:
+
+- Create appointments.
+- View existing appointments.
+- Update appointment information.
+- Cancel appointments.
+- Access appointment history.
+
+### Advantages
+
+- Better organization of medical schedules.
+- Reduced manual management.
+- Improved efficiency.
+
+---
+
+## Service Management
+
+The application provides service management features such as:
+
+- Adding new medical services.
+- Editing service details.
+- Viewing service information.
+- Removing outdated services.
+
+### Examples of Services
+
+- General Consultation
+- Medical Check-up
+- Follow-up Consultation
+- Emergency Care
+- Preventive Care
+
+---
+
+## Dashboard
+
+After successful authentication, users are redirected to the dashboard.
+
+The dashboard provides:
+
+- Quick access to appointments.
+- Quick access to services.
+- User profile overview.
+- Navigation shortcuts.
+
+---
+
+## Multilingual Support
+
+The application supports:
+
+- English Language
+- Arabic Language
+
+Users can switch languages dynamically through the interface.
+
+### Benefits
+
+- Better accessibility.
+- Improved user experience.
+- Support for diverse users.
+
+---
+
+# Technologies Used
+
+## Backend Technologies
+
+- PHP 8.2+
+- Laravel Framework
+- Laravel Breeze Authentication
+- Eloquent ORM
+
+## Frontend Technologies
+
+- HTML5
+- CSS3
+- JavaScript
+- Blade Templates
+
+## Database
+
+- MySQL
+
+## Development Tools
+
+- Composer
+- Node.js
+- NPM
+- Vite
+- Git
+- GitHub
+
+---
+
+# System Architecture
+
+The application follows the MVC architecture:
+
+## Model
+
+Responsible for database operations and business logic.
+
+Examples:
+
+- User Model
+- Appointment Model
+- Service Model
+
+## View
+
+Responsible for displaying information to users.
+
+Examples:
+
+- Login Page
+- Registration Page
+- Dashboard
+- Appointment Pages
+
+## Controller
+
+Responsible for processing requests and connecting models with views.
+
+Examples:
+
+- AppointmentController
+- ServiceController
+- ProfileController
+
+---
+
+# Database Structure
+
+The database contains several tables including:
+
+## Users Table
+
+Stores:
+
+- User ID
+- Name
+- Email
+- Password
+- Timestamps
+
+## Appointments Table
+
+Stores:
+
+- Appointment ID
+- Appointment Date
+- Appointment Time
+- User ID
+- Status
+
+## Services Table
+
+Stores:
+
+- Service ID
+- Service Name
+- Description
+- Price
+- Creation Date
+
+---
+
+# Installation Guide
+
+## Step 1: Clone Repository
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone https://github.com/fatimaaz25/cabinet-medical.git
+cd cabinet-medical
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+## Step 2: Install Dependencies
 
-## Contributing
+```bash
+composer install
+npm install
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Step 3: Configure Environment
 
-## Code of Conduct
+```bash
+cp .env.example .env
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Step 4: Generate Application Key
 
-## Security Vulnerabilities
+```bash
+php artisan key:generate
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Step 5: Configure Database
 
-## License
+Open the `.env` file and update:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=cabinet_medical
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+## Step 6: Run Migrations
+
+```bash
+php artisan migrate
+```
+
+## Step 7: Start Application
+
+```bash
+php artisan serve
+```
+
+## Step 8: Run Frontend Assets
+
+```bash
+npm run dev
+```
+
+Open your browser and visit:
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+# Security Features
+
+The application includes several security mechanisms:
+
+- Authentication Middleware
+- Authorization Checks
+- Password Hashing
+- CSRF Protection
+- Input Validation
+- Session Protection
+
+These features help protect user data and application resources.
+
+---
+
+# Testing
+
+The application was tested for:
+
+- User Registration
+- User Login
+- User Logout
+- Appointment Creation
+- Appointment Update
+- Appointment Deletion
+- Service Management
+- Language Switching
+
+---
+
+# Future Improvements
+
+Future versions may include:
+
+- Doctor Management Module
+- Patient Records Management
+- Medical Reports
+- Email Notifications
+- SMS Notifications
+- Online Consultation
+- Payment Integration
+- Advanced Statistics Dashboard
+- Mobile Application
+
+---
+
+# Challenges Encountered
+
+During development, several challenges were encountered:
+
+- Database design optimization.
+- Authentication integration.
+- Route protection.
+- Language management.
+- User interface organization.
+- CRUD implementation.
+
+These challenges were resolved using Laravel documentation and best development practices.
+
+---
+
+# Conclusion
+
+The Cabinet Medical Management System successfully demonstrates the implementation of a complete Laravel web application. The project provides secure authentication, appointment management, service management, multilingual support, and a responsive user interface.
+
+The application can serve as a foundation for more advanced healthcare management systems in the future.
+
+---
+
+# Author
+
+Fatima Zohra azbito 

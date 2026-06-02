@@ -9,12 +9,14 @@ class SetLocale
 {
     public function handle(Request $request, Closure $next)
     {
-        if (session()->has('locale')) {
-            app()->setLocale(session('locale'));
-        } elseif ($request->cookie('locale')) {
-            app()->setLocale($request->cookie('locale'));
-            session(['locale' => $request->cookie('locale')]);
+        $locale = session('locale');
+
+        if (in_array($locale, ['en', 'ar'])) {
+            app()->setLocale($locale);
+        } else {
+            app()->setLocale('en');
         }
+
         return $next($request);
     }
 }
